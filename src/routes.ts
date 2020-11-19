@@ -1,13 +1,21 @@
 import express, {Request, Response} from 'express'
 import multer from 'multer'
 import multerConfig from './config/multer'
+import Post from './models/Post'
 
 const routes = express.Router()
 
-routes.post('/posts', multer(multerConfig).single('file'), (req: Request, res: Response)=>{
-    console.log(req.file)
+routes.post('/posts', multer(multerConfig).single('file'), async (req: Request, res: Response)=>{
+    const { originalname : name, size, filename: key  } = req.file
 
-    return res.json({ hello: "Acho que vai dar certo!"})
+    const post = await Post.create<File>({
+        name,
+        size,
+        key,
+        url: '',
+    })
+
+    return res.json(post)
 })
 
 export default routes
