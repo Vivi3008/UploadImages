@@ -6,7 +6,7 @@ import Post from './models/Post'
 const routes = express.Router()
 
 routes.post('/posts', multer(multerConfig).single('file'), async (req: Request, res: Response)=>{
-    const { originalname : name, size, filename: key  } = req.file
+    const { originalname : name, size, filename: key } = req.file
 
     const post = await Post.create<File>({
         name,

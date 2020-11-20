@@ -2,7 +2,10 @@ import express, { urlencoded } from 'express'
 import routes from './routes'
 import morgan from 'morgan'
 import mongoose from 'mongoose'
-import Post from './models/Post'
+import * as dotenv from 'dotenv'
+
+dotenv.config({path:__dirname+'/.env'})
+
 
 const app = express()
 
