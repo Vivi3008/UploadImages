@@ -1,17 +1,16 @@
-import express, { urlencoded } from 'express'
+import express from 'express'
 import routes from './routes'
 import morgan from 'morgan'
 import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
 
-dotenv.config({path:__dirname+'/.env'})
-
+dotenv.config()
 
 const app = express()
 
 //Database setup
 
-mongoose.connect("mongodb://localhost:27017/upload", {useNewUrlParser: true} )
+mongoose.connect(process.env.MONGO_DB_URL, {useNewUrlParser: true} )
 
 
 
