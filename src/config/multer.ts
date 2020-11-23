@@ -28,7 +28,7 @@ const storageTypes = {
 
 export default {
   dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'),
-  storage: storageTypes['local'],
+  storage: storageTypes['s3'], //mudar para s3 se quiser mandar upload para aws
   limits: {
       fileSize: 2 * 1024 * 1024,
   },
