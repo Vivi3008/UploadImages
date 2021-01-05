@@ -1,7 +1,7 @@
 # Uploader
 
 Api desenvolvida em typescript para fazer upload de imagens seguindo o exemplo desse vídeo da Rocketseat.
-![Upload de arquivos com NodeJs](https://www.youtube.com/watch?v=MkkbUfcZUZM)
+[Upload de arquivos com NodeJs](https://www.youtube.com/watch?v=MkkbUfcZUZM)
 
 
 ## 🛠 Tecnologias
