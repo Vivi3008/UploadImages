@@ -3,6 +3,11 @@ import path from 'path'
 import multers3 from 'multer-s3'
 import aws from 'aws-sdk'
 
+import * as dotenv from 'dotenv'
+
+dotenv.config()
+
+
 
 const storageTypes = {
     local: multer.diskStorage({
@@ -28,7 +33,7 @@ const storageTypes = {
 
 export default {
   dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'),
-  storage: storageTypes['local'], //mudar para s3 se quiser mandar upload para aws
+  storage: storageTypes['s3'], //mudar para s3 se quiser mandar upload para aws
   limits: {
       fileSize: 2 * 1024 * 1024,
   },
