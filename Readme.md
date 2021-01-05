@@ -12,6 +12,7 @@ Api desenvolvida em typescript para fazer upload de imagens seguindo o exemplo d
 - [Morgan](https://github.com/expressjs/morgan#readme)
 - MongoDb Atlas (para salvar os dados da foto)
 - AWS S3 (criar um link de acesso as fotos)
+- Deploy no heroku [Aqui!](https://upload-fotos.herokuapp.com/posts)
 
 ## 👩‍💻Autora
 
